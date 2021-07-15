@@ -24,4 +24,8 @@ repository (penyimpanan) untuk tugas akhir basis data
 |[MariaDB](https://mariadb.org/)            |*Database*                |
 |[Visual Studio Code](https://code.visualstudio.com/)|*Text Editor*|
 
+
+## Fitur
+
+Sejauh ini, fitur pada *website* yang kami gunakan sebagai bukti penerapan *database* , masih terbatas pada menampilkan *data* dari dalam tabel milik *database* tersebut.
  

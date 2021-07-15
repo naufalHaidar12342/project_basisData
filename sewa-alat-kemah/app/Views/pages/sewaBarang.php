@@ -1,44 +1,66 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+
+<h2 class="fs-3 text-center mb-5 " style="margin-top:10rem">Sewa Alat Kemah</h2>
+
+<!-- tombol kembali ke halaman sebelumnya -->
+<div class="container d-flex flex-column align-items-start">
+    <!-- menggunakan routes ketika user memasukkan slash -->
+    <a href="/" class="btn btn-primary my-4">
+        <i class="bi bi-box-arrow-left "></i>
+        Kembali
+    </a>
+</div>
+
 <form action="" method="post">
     <?= csrf_field(); ?>
     <div class="container d-flex flex-column align-items-center">
-        <!-- baris untuk kode barang dan NUP SIMAK -->
+
         <div class="row justify-content-between ms-3 me-4 my-4 w-100">
+            <!-- kolom kiri -->
             <div class="col-5">
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="kode-barang" class=" w-25 col-form-label">Nama Penyewa</label>
-                    <input type="text" class="form-control ms-2" id="kode-barang" name="kode-barang">
+                    <label for="nama-penyewa" class=" w-25 col-form-label">Nama Penyewa</label>
+                    <input type="text" class="form-control ms-2" id="nama-penyewa" name="nama-penyewa" placeholder="Nama lengkap sobat">
                 </div>
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="nama-barang" class="w-25 col-form-label">Nama Barang</label>
-                    <input type="email" class="form-control ms-2" id="nama-barang" name="nama-barang">
+                    <label for="nomer-telpon" class="w-25 col-form-label">No. Telpon</label>
+                    <input type="text" class="form-control ms-2" id="nomer-telpon" name="nomer-telpon" placeholder="Nomer dimulai dari 0. Contoh: 081222333">
                 </div>
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="kondisi" class=" col-form-label w-25">Kondisi</label>
-                    <input type="text" class="form-control ms-2" id="kondisi" name="kondisi">
+                    <label for="pilih-barang" class=" col-form-label w-25">Pilih Barang</label>
+                    <select name="" id="pilih-barang" class="form-select ms-2">
+                        <?php $panggil = model('App\Models\MstBarangModel');
+                        $show = $panggil->findAll(); ?>
+                        <option value="">Pilih barang...</option>
+                        <?php foreach ($show as $data) : ?>
+                            <option value="<?= $data['nama']; ?>"><?= $data['nama']; ?></option>
+
+                        <?php endforeach; ?>
+                    </select>
                 </div>
 
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="pemakai" class=" col-form-label w-25">Pemakai</label>
-                    <input type="text" class="form-control ms-2" id="pemakai" name="pemakai">
+                    <label for="jumlah" class=" col-form-label w-25">Jumlah</label>
+                    <input type="text" class="form-control ms-2" id="jumlah" name="jumlah" placeholder="Jumlah barang yang ingin disewa">
                 </div>
 
             </div>
 
+            <!-- kolom kanan -->
             <div class="col-5">
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="nup-simak" class="w-25 col-form-label">NUP SIMAK</label>
-                    <input type="email" class="form-control ms-2" id="nup-simak" name="nup-simak">
+                    <label for="alamat" class="w-25 col-form-label">Alamat</label>
+                    <input type="text" class="form-control ms-2" id="alamat" name="alamat" placeholder="sertakan RT/RW jika ada">
                 </div>
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="keterangan" class="col-form-label w-25">Keterangan</label>
-                    <input type="email" class="form-control ms-2" id="keterangan" name="keterangan">
+                    <label for="tanggal-pinjam" class="col-form-label w-25">Tanggal Pinjam</label>
+                    <input type="date" class="form-control ms-2" id="tanggal-pinjam">
                 </div>
                 <div class="col-12 d-flex flex-row mb-4">
-                    <label for="tgl-perolehan" class="col-form-label w-25">Tanggal Perolehan</label>
-                    <input type="date" class="form-control ms-2" id="tgl-perolehan">
+                    <label for="tanggal-harus-kembali" class="col-form-label w-25">Tanggal Harus Kembali</label>
+                    <input type="date" class="form-control ms-2" id="tanggal-harus-kembali" class="col-form-label w-25" disabled>
                 </div>
             </div>
         </div>

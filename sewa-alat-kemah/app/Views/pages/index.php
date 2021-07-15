@@ -15,13 +15,12 @@
             <div class="carousel-item active">
                 <img src="/img/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg" class="d-block w-100" alt="..." style="height:55vh;object-fit:cover;">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
                     <p>Photo by Kevin Ianeselli on Unsplash</p>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <p>Mengapresiasi alam dengan mencoba lebih dekat dengannya~</p>
                     <p class="d-flex justify-content-center">
                         <a href="#" class="btn btn-outline-light d-flex align-items-center" style="padding-top:1rem;padding-bottom:1rem;">
                             <img src="/img/camping.svg" alt="" height="24px" width="24px" class="me-2">
-                            Start Camping
+                            Yuk Berkemah!
                         </a>
                     </p>
                 </div>
@@ -29,12 +28,12 @@
             <div class="carousel-item">
                 <img src="/img/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg" class="d-block w-100" alt="..." style="height:55vh;object-fit:cover;">
                 <div class=" carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <p>Memulai sesuatu yang baru sering membuat kita kewalahan.</p>
+                    <p>Yuk, kita coba pelajari dasarnya!.</p>
                     <p class="d-flex justify-content-center">
                         <a href="#" class="btn btn-outline-light d-flex align-items-center" style="padding-top:1rem;padding-bottom:1rem;">
                             <i class="bi bi-question-diamond-fill me-2"></i>
-                            About Camping
+                            Tentang Berkemah
                         </a>
                     </p>
                 </div>

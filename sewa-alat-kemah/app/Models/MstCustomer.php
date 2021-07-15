@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MstBarangModel extends Model
+class MstCustomer extends Model
 {
     //menentukan tabel yang akan digunakan
-    protected $table = "mst_barang";
+    protected $table = "mst_customer";
 
     //menentukan primary key dari table
     protected $primaryKey = "id";
@@ -16,7 +16,7 @@ class MstBarangModel extends Model
     protected $returnType = "array";
 
     //menentukan field yang bisa dimanipulasi
-    protected $allowedFields = ['kode_barang'];
+    protected $allowedFields = ['kode_customer', 'nama', 'no_hp', 'alamat'];
 
     //menyanmbungkan ke database
     protected $db;

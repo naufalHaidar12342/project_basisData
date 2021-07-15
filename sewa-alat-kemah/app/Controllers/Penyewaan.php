@@ -30,4 +30,17 @@ class Penyewaan extends BaseController
 
         return view('pages/sewaBarang', $pageTitles);
     }
+
+    public function save()
+    {
+        // array untuk di dalam tabel mst_customer
+        $data = [
+            'nama' => $this->request->getVar('nama-penyewa'),
+            'no_hp' => '',
+            'alamat' => ''
+        ];
+        $panggil = model('App\Models\MstBarang');
+        $this->MstBarang->save();
+        $this->session->set_flashdata('');
+    }
 }
